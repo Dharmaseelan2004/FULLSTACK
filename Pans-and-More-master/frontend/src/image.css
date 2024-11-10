@@ -1,0 +1,97 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+  }
+  
+  .page-container {
+    background-image: url('./images/background1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: scroll;
+  }
+
+  .home-page{
+    text-align: center; 
+    margin-top: 50px; 
+  }
+
+  .home-page h1{
+    color: #000000;
+    font-size: 40px;
+    margin:30px;
+  }
+
+  .home-page button{
+    background-color: Teal; 
+    color: white; 
+    padding: 10px 20px; 
+    margin: 15px 5px; 
+    cursor: pointer; 
+    border: none; 
+    border-radius: 10px; 
+    font-size:20px;
+    width:200px;
+  }
+
+  .home-page button:hover{
+    background-color: rgb(0, 70, 70);
+  }
+
+  .home-page p{
+    margin:30px;
+    font-size:20px;
+    background-color: rgb(0,128,128,0.5);
+    border-radius: 10px;
+  }
+
+  .auth-form{
+    width: 500px;
+    margin: 0 auto;
+    margin: 50px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(0, 128, 128,0.3);
+  }
+
+  .auth-form h2{
+    color: #000000;
+    font-size: 40px;
+    margin:20px;
+    text-align: center;
+  }
+
+  .auth-form label{
+    color: #000000;
+    font-size: 20px;
+    margin:15px;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .auth-form input{
+    color: #000000;
+    font-size: 20px;
+    margin:10px;
+    border-radius:10px;
+    width:100%;
+  }
+
+  .auth-form button{
+    width: 100%;
+    padding: 10px;
+    background-color: Teal;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size:20px;
+    margin-top:20px;
+  }

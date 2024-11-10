@@ -1,0 +1,419 @@
+
+body{
+  background:rgb(210, 210, 210);
+  margin:0;
+  padding:0;
+  font-size:20px;
+}
+
+/*@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');*/
+
+* { 
+  padding: 0;
+  margin: 0;
+  box-sizing:border-box; 
+  font-family: 'Abhaya Libre', serif;
+}
+
+:root {
+  --mainColor: Teal;
+  --mainColorLight:rgb(11, 171, 171);
+  --secondaryColor: grey;
+  --textColor: white;
+}
+
+.error{
+  border:1px solid rgb(255, 6, 6);
+  text-align: center;
+  padding:5px;
+  font-size:20px;
+  background-color: rgba(255, 6, 6, 0.3);
+  border-radius:5px;
+  margin:15px;
+  color:white;
+}
+
+header {
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+  height:80px;
+  padding:0 2rem;
+  background-color:teal;
+  color:var(--textColor);
+}
+
+nav{
+  display: flex;
+}
+
+nav a {
+  margin: 10px;
+  padding:15px;
+  color: var(--textColor);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color:black;
+}
+
+nav img{
+  height:80px;
+
+} 
+
+header .nav-btn {
+  padding:5px;
+  cursor:pointer;
+  background:transparent;
+  border:none;
+  outline:none;
+  color:var(--textColor);
+  visibility:hidden;
+  opacity:0;
+  font-size:1.8rem;
+}
+
+header nav {
+  flex:80%;
+  display:flex;
+  align-items:center;
+}
+
+@media only screen and (max-width:1024px){
+    header .nav-btn{
+      visibility:visible;
+      opacity:1;
+      justify-content: flex-start;
+    }
+
+    header nav{
+      position:fixed;
+      top:-100vh;
+      left:0;
+      height:100%;
+      width:100%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content: center;
+      gap:1.5rem;
+      background-color: var(--mainColor);
+      transition: 0.3s;
+    }
+
+    header .responsive_nav{
+      transform: translateY(100vh);
+    }
+
+    nav .nav-close-btn {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+
+	nav a {
+    font-size: 1.5rem;
+    margin:10px;
+	}
+  header .user-info-nav {
+    display: flex; 
+    flex:0%
+  }
+
+  header .responsive_nav ~ .user-info-nav {
+    display: none; 
+  }
+}
+
+header .user-info-nav{
+    flex:10%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header .user-info-nav button{
+    background-color: transparent;
+    border:2px solid white;
+    padding:5px;
+    font-size:15px;
+    border-radius:5px;
+    color:white;
+    margin-left:10px;
+}
+
+.active{
+    color:black;
+    margin-bottom:5px;
+    border-bottom: 5px solid black;
+}
+
+.recipelist {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recipe-box {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  width: 250px; 
+}
+.recipe-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recipe-item {
+  margin: 10px;
+  padding-left:10px;
+  padding-right:10px;
+  border: 1px solid #000000;
+  text-align: center;
+  background-color: rgb(233, 233, 233);
+}
+
+.recipe-item p{
+  font-size: 20;
+  margin:5px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%; 
+  padding-top:5px; 
+}
+
+.recipe-user:hover{
+  font-size: 25px;
+  color:gray;
+}
+
+.main-page button{
+  margin:20px;
+  padding:10px;
+  font-size:20px;
+  background-color: teal;
+  border-radius: 10px;
+  width:120px;
+  border: none;
+}
+.main-page button:hover{
+  background-color: rgb(0, 70, 70);
+  font-size:25px;
+  color:white;
+}
+
+.recipe-form{
+  margin: 0 auto;
+  width:70%;
+  border: 1px solid black;
+  padding:30px;
+  border-radius: 10px;
+  align-items: center;
+  font-size: 20px;
+  align-items: center;
+}
+
+.ingredient-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.recipe-form h3{
+  text-align:center;
+  margin-bottom:20px
+}
+
+.recipe-form label {
+  display: block;
+  margin: 10px 0;
+  padding:10px;
+  font-size:25px;
+}
+
+.recipe-form input[type='text']{
+  font-size:20px;
+  width:80%;
+  margin:10px;
+}
+
+.recipe-form input[type='number']{
+  font-size:20px;
+}
+
+.recipe-form input[type='radio']{
+  margin:5px;
+}
+
+.recipe-form button{
+  font-size: 15px;
+  background-color: teal;
+  color:white;
+  border-radius:5px;
+  padding:5px;
+  margin:10px;
+  border:none;
+}
+
+.recipe-form textarea{
+  font-size: 15px;
+  width:95%;
+  border-radius:5px;
+}
+
+.post-button{
+  text-align: center;
+  padding:25px;
+}
+
+.post-button button{
+  font-size:20px;
+  padding:15px;
+  width:100%;
+}
+
+.search-bar-container{
+  margin:30px;
+  align-items: center;
+}
+
+.search-bar-container input,.search-bar-container select{
+  margin:15px;
+  font-size:20px;
+  border-radius:5px;
+  border:none;
+  padding:5px
+}
+
+.search-bar-container button{
+  font-size:15px;
+  padding:8px;
+  border-radius: 5px;
+  background-color: teal;
+  color:white;
+  border:none;
+}
+
+.profile{
+  margin:30px;
+}
+
+.user-info-profile {
+  display: flex;
+  align-items: center; 
+}
+
+.user-info-profile h2{
+  margin:10px;
+}
+
+.profile p{
+  margin:10px;
+}
+
+.profile h3{
+  margin-top:10px;
+}
+
+.profile button{
+  border: none;
+  font-size:20px;
+  background-color: teal;
+  border-radius:10px;
+  padding:10px;
+  margin:10px;
+}
+
+.rec-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons-container{
+  display: flex;
+  align-items: right;
+  margin:10px;
+  justify-content: flex-end;
+}
+
+.left-content {
+  max-width: 55%; 
+}
+
+.right-content {
+  max-width: 40%; 
+  padding:20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-content img{
+  margin:10px;
+}
+
+.right-content p{
+  margin:5px;
+}
+
+.left-content ul{
+  list-style-type: disc;
+  margin-left:2rem;
+}
+
+.left-content p{
+  margin:5px;
+}
+
+
+.icons-container span{
+  font-size:30px;
+  margin-left:10px;
+}
+
+.directions{
+  padding-left:20px;
+}
+
+.right-content button{
+  font-size:20px;
+  background-color: teal;
+  color:white;
+  margin:10px;
+  padding:10px;
+  border-radius: 5px;
+  border:none;
+}
+
+.right-content textarea{
+  font-size: 20px;
+  width:95%;
+  border-radius:5px
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  border:1px solid white;
+  background-color: rgba(245, 245, 245, 0.801);
+  margin:10px;
+  width:100%;
+  border-radius: 10px;
+}
+
+.comment-actions {
+  display: flex;
+  align-items: center;
+}
+
+.comment-actions span{
+  padding-left:20px;
+}
